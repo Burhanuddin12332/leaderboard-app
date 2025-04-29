@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+        th { background-color: #f4f4f4; }
+        input, select, button { margin-right: 10px; padding: 6px; }
+    </style>
+</head>
+<body>
+    <h1>Leaderboard</h1>
+
+    <div>
+        <label>Filter:</label>
+        <select id="filter">
+        <option value="day">Day</option>
+        <option value="month">Month</option>
+        <option value="year">Year</option>
+        </select>
+        <button onclick="loadLeaderboard()">Filter</button>
+    </div>
+    <br>
+
+    <div>
+        <label>Search User ID:</label>
+        <input type="number" id="searchId" />
+        <button onclick="searchUser()">Search</button>
+    </div>
+    <br>
+
+    <button onclick="recalculate()">Recalculate</button>
+
+    <table id="leaderboardTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Points</th>
+            <th>Rank</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
